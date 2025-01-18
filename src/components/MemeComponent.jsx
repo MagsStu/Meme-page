@@ -38,7 +38,7 @@ export function MemeComponent({ memy, setMemes, filter }) {
       </p>
       <div className='mem-grid'>
         {splitMemes.map((mem) => (
-          <div className='mem-cont' key={mem.title}>
+          <div className='mem-cont' key={mem.id}>
             <h2>
               {mem.upvote - mem.downvote >= 15
                 ? mem.title + '\u2B50'
@@ -49,14 +49,14 @@ export function MemeComponent({ memy, setMemes, filter }) {
               <p>Hearts: {mem.upvote}</p>
               <button
                 className='vote-btn'
-                onClick={addHeart.bind(null, mem.title)}
+                onClick={addHeart.bind(null, mem.id)}
               >
                 &#128150;
               </button>
               <p>Broken: {mem.downvote}</p>
               <button
                 className='vote-btn'
-                onClick={brokenHeart.bind(null, mem.title)}
+                onClick={brokenHeart.bind(null, mem.id)}
               >
                 &#128148;
               </button>
