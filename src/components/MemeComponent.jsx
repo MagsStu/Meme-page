@@ -47,17 +47,11 @@ export function MemeComponent({ memy, setMemes, filter }) {
             <img src={mem.img} alt={mem.alt} />
             <div className='voting-num'>
               <p>Hearts: {mem.upvote}</p>
-              <button
-                className='vote-btn'
-                onClick={addHeart.bind(null, mem.id)}
-              >
+              <button className='vote-btn' onClick={() => addHeart(mem.id)}>
                 &#128150;
               </button>
               <p>Broken: {mem.downvote}</p>
-              <button
-                className='vote-btn'
-                onClick={brokenHeart.bind(null, mem.id)}
-              >
+              <button className='vote-btn' onClick={() => brokenHeart(mem.id)}>
                 &#128148;
               </button>
             </div>
