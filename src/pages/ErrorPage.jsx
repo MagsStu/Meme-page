@@ -6,9 +6,11 @@ export function ErrorPage() {
   return (
     <div className='error-box'>
       <h1>404 ERROR PAGE</h1>
-      <Link to='/hot'>
-        <button class='return-btn'>Go back</button>
-      </Link>
+      <div>
+        <Link to='/'>
+          <button class='return-btn'>Go back</button>
+        </Link>
+      </div>
       <img src={memyImg} alt='meme' style={{ width: '500px' }}></img>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 export function Footer() {
   return (
     <div className='footer-main'>
-      <p>Lorem Ipsum</p>
+      <p> @2025 Lorem Ipsum </p>
     </div>
   );
 }
